@@ -70,17 +70,23 @@ import { Check, Clock, Wrench, Phone, AlertCircle } from 'lucide-astro';
 
             <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-8">
               {[
-                { name: 'Stannah', url: 'https://www.stannah.co.uk' },
+                { name: 'Stannah', url: 'https://www.stannah.com' },
                 { name: 'Acorn', url: 'https://www.acornstairlifts.co.uk' },
-                { name: 'Brooks', url: 'https://www.brooksstairlifts.co.uk' },
+                { name: 'Brooks', url: 'http://www.brooksstairlifts.co.uk' },
                 { name: 'Handicare', url: 'https://www.handicare.com' },
-                { name: 'Minivator', url: 'https://www.minivator.co.uk' },
+                { name: 'Minivator', url: null },
                 { name: 'ThyssenKrupp', url: 'https://www.tkelevator.com' },
-                { name: 'Platinum', url: 'https://www.platinum-stairlifts.co.uk' },
+                { name: 'Platinum', url: 'https://platinumstairlifts.com' },
               ].map((brand) => (
-                <a href={brand.url} target="_blank" rel="noopener noreferrer" class="bg-slate-50 hover:bg-slate-100 rounded-lg px-4 py-3 text-center transition-colors">
-                  <span class="font-medium text-slate-700">{brand.name}</span>
-                </a>
+                brand.url ? (
+                  <a href={brand.url} target="_blank" rel="noopener noreferrer" class="bg-slate-50 hover:bg-slate-100 rounded-lg px-4 py-3 text-center transition-colors">
+                    <span class="font-medium text-slate-700">{brand.name}</span>
+                  </a>
+                ) : (
+                  <div class="bg-slate-50 rounded-lg px-4 py-3 text-center">
+                    <span class="font-medium text-slate-700">{brand.name}</span>
+                  </div>
+                )
               ))}
             </div>
 
