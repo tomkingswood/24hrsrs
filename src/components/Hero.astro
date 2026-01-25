@@ -2,13 +2,13 @@
 import { Phone, Clock, Shield } from 'lucide-astro';
 ---
 
-<section class="relative text-white overflow-hidden max-h-[800px]">
+<section class="relative text-white overflow-hidden">
   <!-- Background image -->
   <div class="absolute inset-0">
     <img
       src="/images/stairlift-hero.jpg"
       alt="Stairlift on stairs"
-      class="w-full h-full object-cover object-center"
+      class="w-full h-full object-cover object-top"
     />
     <!-- Subtle brand tint overlay for text readability -->
     <div class="absolute inset-0 bg-gradient-to-r from-primary-900/80 via-primary-800/50 to-primary-700/30"></div>
@@ -58,10 +58,6 @@ import { Phone, Clock, Shield } from 'lucide-astro';
 
       <!-- Trust badges -->
       <div class="flex flex-wrap gap-6 text-sm text-white/80">
-        <div class="flex items-center gap-2">
-          <Shield class="w-5 h-5 text-white/90" />
-          <span>No Fix, No Fee</span>
-        </div>
         <div class="flex items-center gap-2">
           <Clock class="w-5 h-5 text-white/90" />
           <span>Same Day Service</span>
