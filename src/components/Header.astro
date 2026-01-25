@@ -1,13 +1,13 @@
 ---
-import { Phone, Clock, Menu, X } from 'lucide-astro';
+import { Phone, Clock, Menu, X, Mail } from 'lucide-astro';
 
 const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/repairs', label: 'Repairs' },
-  { href: '/installations', label: 'Installations' },
-  { href: '/servicing', label: 'Servicing' },
-  { href: '/pricing', label: 'Pricing' },
+  { href: '/installations', label: 'Installations & Removals' },
+  { href: '/servicing', label: 'Service & Maintenance' },
   { href: '/faqs', label: 'FAQs' },
+  { href: '/pricing', label: 'Price Guide' },
 ];
 
 const currentPath = Astro.url.pathname;
@@ -18,7 +18,7 @@ const currentPath = Astro.url.pathname;
   <div class="bg-primary-700 text-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex flex-wrap items-center justify-between py-2 text-sm">
-        <div class="flex items-center gap-6">
+        <div class="flex items-center gap-4 sm:gap-6">
           <a href="tel:01142347195" class="flex items-center gap-2 hover:text-primary-200 transition-colors">
             <Phone class="w-4 h-4" />
             <span class="hidden sm:inline">0114 2347195</span>
@@ -28,6 +28,10 @@ const currentPath = Astro.url.pathname;
             <Phone class="w-4 h-4" />
             <span class="hidden sm:inline">07835 204800</span>
             <span class="sm:hidden">Mobile</span>
+          </a>
+          <a href="mailto:srs.24hr@hotmail.com" class="hidden md:flex items-center gap-2 hover:text-primary-200 transition-colors">
+            <Mail class="w-4 h-4" />
+            <span>srs.24hr@hotmail.com</span>
           </a>
         </div>
         <div class="flex items-center gap-2">

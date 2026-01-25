@@ -8,7 +8,6 @@ A modern static website built with Astro and Tailwind CSS, hosted on Cloudflare 
 - **Styling**: Tailwind CSS 4.x
 - **Icons**: Lucide Icons
 - **Hosting**: Cloudflare Pages
-- **Contact Form**: Cloudflare Worker + Resend
 
 ## Local Development
 
@@ -51,24 +50,7 @@ git push -u origin main
    - **Build command**: `npm run build`
    - **Build output directory**: `dist`
 
-### 3. Configure Environment Variables
-
-In Cloudflare Pages dashboard, add these environment variables:
-
-| Variable | Description |
-|----------|-------------|
-| `RESEND_API_KEY` | Your Resend API key |
-| `TO_EMAIL` | Email to receive form submissions (default: srs.24hr@hotmail.com) |
-| `FROM_EMAIL` | Verified sender email in Resend |
-
-### 4. Set Up Resend
-
-1. Create account at [resend.com](https://resend.com)
-2. Verify your domain or use the default sender
-3. Create an API key
-4. Add the API key to Cloudflare Pages environment variables
-
-### 5. Configure Custom Domain
+### 3. Configure Custom Domain
 
 1. In Cloudflare Pages, go to Custom domains
 2. Add your domain (e.g., 24hrstairliftrepairs.co.uk)
@@ -83,7 +65,6 @@ src/
 │   ├── Footer.astro      # Footer with contact info
 │   ├── Hero.astro        # Homepage hero section
 │   ├── ServiceCard.astro # Reusable service card
-│   ├── ContactForm.astro # Contact form component
 │   ├── FAQ.astro         # Accordion FAQ item
 │   ├── PriceTable.astro  # Pricing table
 │   ├── CTA.astro         # Call-to-action section
@@ -96,9 +77,7 @@ src/
 │   ├── installations.astro
 │   ├── servicing.astro
 │   ├── faqs.astro
-│   ├── pricing.astro
-│   └── api/
-│       └── contact.ts    # Contact form API endpoint
+│   └── pricing.astro
 └── styles/
     └── global.css        # Tailwind + custom styles
 ```
