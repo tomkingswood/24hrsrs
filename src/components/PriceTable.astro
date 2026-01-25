@@ -1,0 +1,61 @@
+---
+import { Check, Info } from 'lucide-astro';
+
+interface PriceItem {
+  service: string;
+  price: string;
+  description?: string;
+}
+
+interface Props {
+  items: PriceItem[];
+}
+
+const { items } = Astro.props;
+---
+
+<div class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden">
+  <div class="bg-primary-50 px-6 py-4 border-b border-primary-100">
+    <h3 class="text-lg font-semibold text-primary-800">Service Pricing</h3>
+    <p class="text-sm text-primary-600 mt-1">Transparent pricing with no hidden fees</p>
+  </div>
+
+  <div class="divide-y divide-slate-100">
+    {items.map((item) => (
+      <div class="px-6 py-4 flex items-center justify-between hover:bg-slate-50 transition-colors">
+        <div class="flex-1">
+          <div class="font-medium text-slate-900">{item.service}</div>
+          {item.description && (
+            <div class="text-sm text-slate-500 mt-1">{item.description}</div>
+          )}
+        </div>
+        <div class="text-lg font-semibold text-primary-600 ml-4">
+          {item.price}
+        </div>
+      </div>
+    ))}
+  </div>
+
+  <div class="bg-slate-50 px-6 py-4 border-t border-slate-100">
+    <div class="flex items-start gap-3">
+      <Info class="w-5 h-5 text-primary-500 flex-shrink-0 mt-0.5" />
+      <div class="text-sm text-slate-600">
+        <p class="font-medium text-slate-700 mb-1">Important Notes:</p>
+        <ul class="space-y-1">
+          <li class="flex items-center gap-2">
+            <Check class="w-4 h-4 text-green-500" />
+            All prices include VAT
+          </li>
+          <li class="flex items-center gap-2">
+            <Check class="w-4 h-4 text-green-500" />
+            No fix, no fee policy
+          </li>
+          <li class="flex items-center gap-2">
+            <Check class="w-4 h-4 text-green-500" />
+            Free quotes available
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

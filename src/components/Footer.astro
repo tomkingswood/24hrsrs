@@ -1,0 +1,103 @@
+---
+import { Phone, Mail, Clock, MapPin } from 'lucide-astro';
+
+const currentYear = new Date().getFullYear();
+
+const quickLinks = [
+  { href: '/repairs', label: 'Stairlift Repairs' },
+  { href: '/installations', label: 'Installations & Removals' },
+  { href: '/servicing', label: 'Service & Maintenance' },
+  { href: '/pricing', label: 'Price Guide' },
+  { href: '/faqs', label: 'FAQs' },
+];
+---
+
+<footer class="bg-slate-900 text-slate-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+      <!-- Company info -->
+      <div class="lg:col-span-1">
+        <div class="mb-4">
+          <img
+            src="/images/logo.jpg"
+            alt="SRS - 24 Hour Stairlift Repair Services"
+            class="h-12 w-auto bg-white rounded p-1"
+          />
+        </div>
+        <p class="text-sm leading-relaxed mb-4">
+          Friendly and honest stairlift repair services in South Yorkshire.
+          Available 24 hours a day, 7 days a week for all your stairlift needs.
+        </p>
+      </div>
+
+      <!-- Quick links -->
+      <div>
+        <h3 class="text-white font-semibold mb-4">Services</h3>
+        <ul class="space-y-2">
+          {quickLinks.map((link) => (
+            <li>
+              <a
+                href={link.href}
+                class="text-sm hover:text-white transition-colors"
+              >
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Contact info -->
+      <div>
+        <h3 class="text-white font-semibold mb-4">Contact Us</h3>
+        <ul class="space-y-3">
+          <li>
+            <a href="tel:01142347195" class="flex items-center gap-3 text-sm hover:text-white transition-colors">
+              <Phone class="w-4 h-4 text-primary-400" />
+              0114 2347195
+            </a>
+          </li>
+          <li>
+            <a href="tel:07835204800" class="flex items-center gap-3 text-sm hover:text-white transition-colors">
+              <Phone class="w-4 h-4 text-primary-400" />
+              07835 204800
+            </a>
+          </li>
+          <li>
+            <a href="mailto:srs.24hr@hotmail.com" class="flex items-center gap-3 text-sm hover:text-white transition-colors">
+              <Mail class="w-4 h-4 text-primary-400" />
+              srs.24hr@hotmail.com
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Hours & Coverage -->
+      <div>
+        <h3 class="text-white font-semibold mb-4">Availability</h3>
+        <ul class="space-y-3">
+          <li class="flex items-center gap-3 text-sm">
+            <Clock class="w-4 h-4 text-primary-400" />
+            <span>24 Hours, 7 Days a Week</span>
+          </li>
+          <li class="flex items-start gap-3 text-sm">
+            <MapPin class="w-4 h-4 text-primary-400 mt-0.5" />
+            <span>Covering South Yorkshire & surrounding areas</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="mt-12 pt-8 border-t border-slate-800">
+      <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
+        <p class="text-sm text-slate-400">
+          &copy; {currentYear} 24 Hour Stairlift Repair Services. All rights reserved.
+        </p>
+        <p class="text-sm text-slate-400">
+          Serving Sheffield & South Yorkshire
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>

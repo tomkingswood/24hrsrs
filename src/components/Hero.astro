@@ -1,0 +1,76 @@
+---
+import { Phone, Clock, Shield } from 'lucide-astro';
+---
+
+<section class="relative text-white overflow-hidden">
+  <!-- Background image -->
+  <div class="absolute inset-0">
+    <img
+      src="/images/stairlift-hero.jpg"
+      alt="Stairlift on stairs"
+      class="w-full h-full object-cover"
+    />
+    <!-- Subtle brand tint overlay for text readability -->
+    <div class="absolute inset-0 bg-gradient-to-r from-primary-900/80 via-primary-800/50 to-primary-700/30"></div>
+  </div>
+
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+    <div class="max-w-3xl">
+      <!-- Badge -->
+      <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 text-sm mb-6">
+        <Clock class="w-4 h-4" />
+        <span>Available 24/7 - Emergency Service</span>
+      </div>
+
+      <!-- Main heading -->
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-white">
+        24 Hour Stairlift
+        <span class="block text-white/90">Repair Services</span>
+      </h1>
+
+      <!-- Subtitle -->
+      <p class="text-xl sm:text-2xl text-white/90 mb-8 font-light">
+        Friendly and Honest Service
+      </p>
+
+      <!-- Description -->
+      <p class="text-lg text-white/80 mb-10 max-w-2xl leading-relaxed">
+        Expert stairlift repairs, installations, and servicing across South Yorkshire.
+        We're here when you need us most – day or night.
+      </p>
+
+      <!-- CTA buttons -->
+      <div class="flex flex-col sm:flex-row gap-4 mb-12">
+        <a
+          href="tel:01142347195"
+          class="md:hidden inline-flex items-center justify-center gap-2 bg-primary-600 hover:bg-primary-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all hover:scale-105"
+        >
+          <Phone class="w-5 h-5" />
+          Call 0114 2347195
+        </a>
+        <a
+          href="/pricing"
+          class="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors border border-white/20"
+        >
+          View Pricing
+        </a>
+      </div>
+
+      <!-- Trust badges -->
+      <div class="flex flex-wrap gap-6 text-sm text-white/80">
+        <div class="flex items-center gap-2">
+          <Shield class="w-5 h-5 text-white/90" />
+          <span>No Fix, No Fee</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <Clock class="w-5 h-5 text-white/90" />
+          <span>Same Day Service</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <Phone class="w-5 h-5 text-white/90" />
+          <span>Free Quotes</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

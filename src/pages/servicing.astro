@@ -1,0 +1,190 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHeader from '../components/PageHeader.astro';
+import CTA from '../components/CTA.astro';
+import { Check, Phone, Settings, Calendar, Shield, AlertTriangle } from 'lucide-astro';
+---
+
+<Layout
+  title="Stairlift Servicing & Maintenance | Sheffield & South Yorkshire"
+  description="Professional stairlift servicing in South Yorkshire. Keep your stairlift running safely with regular maintenance. Call 0114 2347195 to book a service."
+>
+  <PageHeader
+    title="Service & Maintenance"
+    subtitle="Keep your stairlift running safely and smoothly"
+  />
+
+  <section class="py-16 lg:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <!-- Main content -->
+        <div class="lg:col-span-2">
+          <p class="text-lg text-slate-600 mb-8">
+            Regular servicing is essential to keep your stairlift operating safely and reliably.
+            Like any mechanical equipment, stairlifts need routine maintenance to ensure they
+            continue to work when you need them most.
+          </p>
+
+          <div class="bg-primary-50 border border-primary-100 rounded-xl p-6 mb-10">
+            <div class="flex items-start gap-4">
+              <Calendar class="w-6 h-6 text-primary-600 flex-shrink-0 mt-0.5" />
+              <div>
+                <h3 class="font-semibold text-primary-800 mb-2">How Often Should You Service?</h3>
+                <p class="text-primary-700">
+                  We recommend servicing your stairlift at least once a year to maintain optimal
+                  performance and safety. More frequent servicing may be needed for heavily used lifts.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <h2 class="text-2xl font-bold text-slate-900 mb-6">What's Included in a Service?</h2>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
+            <div class="flex items-start gap-3">
+              <Check class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
+              <span class="text-slate-700">Full safety inspection</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <Check class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
+              <span class="text-slate-700">Battery check and testing</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <Check class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
+              <span class="text-slate-700">Track cleaning and lubrication</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <Check class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
+              <span class="text-slate-700">Motor and gearbox inspection</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <Check class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
+              <span class="text-slate-700">Seat swivel mechanism check</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <Check class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
+              <span class="text-slate-700">Safety sensor testing</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <Check class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
+              <span class="text-slate-700">Remote control check</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <Check class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
+              <span class="text-slate-700">Electrical connections check</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <Check class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
+              <span class="text-slate-700">Belt and drive inspection</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <Check class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
+              <span class="text-slate-700">Footrest and armrest adjustment</span>
+            </div>
+          </div>
+
+          <h2 class="text-2xl font-bold text-slate-900 mb-6">Benefits of Regular Servicing</h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+            <div class="bg-white rounded-xl p-6 border border-slate-100 shadow-sm">
+              <Shield class="w-8 h-8 text-primary-600 mb-4" />
+              <h3 class="font-semibold text-slate-900 mb-2">Safety Assurance</h3>
+              <p class="text-sm text-slate-600">
+                Ensure all safety features are working correctly to protect you and your family.
+              </p>
+            </div>
+            <div class="bg-white rounded-xl p-6 border border-slate-100 shadow-sm">
+              <Settings class="w-8 h-8 text-primary-600 mb-4" />
+              <h3 class="font-semibold text-slate-900 mb-2">Prevent Breakdowns</h3>
+              <p class="text-sm text-slate-600">
+                Catch potential problems early before they become expensive repairs.
+              </p>
+            </div>
+            <div class="bg-white rounded-xl p-6 border border-slate-100 shadow-sm">
+              <Calendar class="w-8 h-8 text-primary-600 mb-4" />
+              <h3 class="font-semibold text-slate-900 mb-2">Extended Lifespan</h3>
+              <p class="text-sm text-slate-600">
+                Regular maintenance helps your stairlift last longer and run more efficiently.
+              </p>
+            </div>
+            <div class="bg-white rounded-xl p-6 border border-slate-100 shadow-sm">
+              <Check class="w-8 h-8 text-primary-600 mb-4" />
+              <h3 class="font-semibold text-slate-900 mb-2">Peace of Mind</h3>
+              <p class="text-sm text-slate-600">
+                Know your stairlift is in top condition and ready when you need it.
+              </p>
+            </div>
+          </div>
+
+          <div class="bg-amber-50 border border-amber-200 rounded-xl p-6">
+            <div class="flex items-start gap-4">
+              <AlertTriangle class="w-6 h-6 text-amber-600 flex-shrink-0 mt-0.5" />
+              <div>
+                <h3 class="font-semibold text-amber-800 mb-2">Signs Your Stairlift Needs Attention</h3>
+                <ul class="space-y-2 text-amber-700">
+                  <li>• Unusual noises during operation</li>
+                  <li>• Slower than normal movement</li>
+                  <li>• Jerky or uneven travel</li>
+                  <li>• Warning lights or beeping</li>
+                  <li>• Battery not holding charge</li>
+                </ul>
+                <p class="mt-4 text-amber-700">
+                  If you notice any of these signs, call us on{' '}
+                  <a href="tel:01142347195" class="font-semibold underline">0114 2347195</a>{' '}
+                  before the problem gets worse.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="lg:col-span-1">
+          <div class="sticky top-24 space-y-6">
+            <div class="bg-primary-50 rounded-2xl p-6 border border-primary-100">
+              <h3 class="font-semibold text-slate-900 mb-4">Book a Service</h3>
+              <p class="text-slate-600 text-sm mb-6">
+                Full service just £80.00. Call us to arrange a convenient time.
+              </p>
+              <div class="space-y-3">
+                <a
+                  href="tel:01142347195"
+                  class="flex items-center justify-center gap-2 w-full bg-primary-600 hover:bg-primary-700 text-white px-4 py-3 rounded-lg font-medium transition-colors"
+                >
+                  <Phone class="w-5 h-5" />
+                  0114 2347195
+                </a>
+                <a
+                  href="tel:07835204800"
+                  class="flex items-center justify-center gap-2 w-full bg-white hover:bg-slate-50 text-primary-600 px-4 py-3 rounded-lg font-medium transition-colors border border-primary-200"
+                >
+                  <Phone class="w-5 h-5" />
+                  07835 204800
+                </a>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm">
+              <h3 class="font-semibold text-slate-900 mb-4">Service Pricing</h3>
+              <div class="space-y-3">
+                <div class="flex justify-between items-center pb-3 border-b border-slate-100">
+                  <span class="text-slate-600">Full service</span>
+                  <span class="font-semibold text-primary-600">£80.00</span>
+                </div>
+                <p class="text-xs text-slate-500">
+                  Price includes full inspection, cleaning, lubrication, and safety checks.
+                  Parts extra if needed.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CTA
+    title="Time for a Service?"
+    subtitle="Don't wait for a breakdown. Book your annual service today."
+  />
+</Layout>

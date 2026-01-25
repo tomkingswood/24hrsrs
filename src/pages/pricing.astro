@@ -1,0 +1,177 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHeader from '../components/PageHeader.astro';
+import PriceTable from '../components/PriceTable.astro';
+import CTA from '../components/CTA.astro';
+import { Phone, Check, Info } from 'lucide-astro';
+
+const prices = [
+  {
+    service: "Standard Call Out",
+    price: "£70.00",
+    description: "8:00am - 6:00pm, Monday to Friday"
+  },
+  {
+    service: "Emergency Call Out",
+    price: "£100.00",
+    description: "6:00pm - 8:00am, weekends & bank holidays"
+  },
+  {
+    service: "Full Service",
+    price: "£80.00",
+    description: "Complete inspection and maintenance"
+  },
+  {
+    service: "Repairs",
+    price: "Varies",
+    description: "Depends on parts and labour required"
+  }
+];
+---
+
+<Layout
+  title="Stairlift Repair Prices | 24 Hour Stairlift Repair Services"
+  description="Transparent pricing for stairlift repairs and servicing in South Yorkshire. Standard call out £70, emergency £100, full service £80. Call 0114 2347195."
+>
+  <PageHeader
+    title="Price Guide"
+    subtitle="Transparent pricing with no hidden fees"
+  />
+
+  <section class="py-16 lg:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <!-- Main content -->
+        <div class="lg:col-span-2">
+          <p class="text-lg text-slate-600 mb-8">
+            We believe in honest, transparent pricing. Below you'll find our standard charges
+            for call-outs and servicing. We'll always give you a clear quote before starting
+            any work.
+          </p>
+
+          <PriceTable items={prices} />
+
+          <div class="mt-12">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">What's Included?</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div>
+                <h3 class="font-semibold text-slate-900 mb-4">Call Out Includes:</h3>
+                <ul class="space-y-3">
+                  <li class="flex items-start gap-3">
+                    <Check class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
+                    <span class="text-slate-600">Travel to your home</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <Check class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
+                    <span class="text-slate-600">Diagnosis of the problem</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <Check class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
+                    <span class="text-slate-600">Quote for any repairs needed</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <Check class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
+                    <span class="text-slate-600">First 30 minutes of labour</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 class="font-semibold text-slate-900 mb-4">Full Service Includes:</h3>
+                <ul class="space-y-3">
+                  <li class="flex items-start gap-3">
+                    <Check class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
+                    <span class="text-slate-600">Complete safety inspection</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <Check class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
+                    <span class="text-slate-600">Track cleaning & lubrication</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <Check class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
+                    <span class="text-slate-600">Battery & electrical checks</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <Check class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
+                    <span class="text-slate-600">All adjustments & minor fixes</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-12 bg-slate-50 rounded-2xl p-6 sm:p-8">
+            <div class="flex items-start gap-4">
+              <Info class="w-6 h-6 text-primary-600 flex-shrink-0 mt-0.5" />
+              <div>
+                <h3 class="font-semibold text-slate-900 mb-3">About Our Pricing</h3>
+                <ul class="space-y-2 text-slate-600">
+                  <li>• All prices include VAT</li>
+                  <li>• Parts are charged separately at cost price plus labour</li>
+                  <li>• We'll always quote before starting any work</li>
+                  <li>• No fix, no fee on repairs (call-out fee still applies)</li>
+                  <li>• Free quotes for installations</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="lg:col-span-1">
+          <div class="sticky top-24 space-y-6">
+            <div class="bg-primary-50 rounded-2xl p-6 border border-primary-100">
+              <h3 class="font-semibold text-slate-900 mb-4">Get a Quote</h3>
+              <p class="text-slate-600 text-sm mb-6">
+                Call us now for a free, no-obligation quote for repairs or installations.
+              </p>
+              <div class="space-y-3">
+                <a
+                  href="tel:01142347195"
+                  class="flex items-center justify-center gap-2 w-full bg-primary-600 hover:bg-primary-700 text-white px-4 py-3 rounded-lg font-medium transition-colors"
+                >
+                  <Phone class="w-5 h-5" />
+                  0114 2347195
+                </a>
+                <a
+                  href="tel:07835204800"
+                  class="flex items-center justify-center gap-2 w-full bg-white hover:bg-slate-50 text-primary-600 px-4 py-3 rounded-lg font-medium transition-colors border border-primary-200"
+                >
+                  <Phone class="w-5 h-5" />
+                  07835 204800
+                </a>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm">
+              <h3 class="font-semibold text-slate-900 mb-4">Payment Methods</h3>
+              <p class="text-sm text-slate-600 mb-4">
+                We accept the following payment methods:
+              </p>
+              <ul class="space-y-2 text-sm text-slate-600">
+                <li class="flex items-center gap-2">
+                  <Check class="w-4 h-4 text-green-500" />
+                  Cash
+                </li>
+                <li class="flex items-center gap-2">
+                  <Check class="w-4 h-4 text-green-500" />
+                  Cheque
+                </li>
+                <li class="flex items-center gap-2">
+                  <Check class="w-4 h-4 text-green-500" />
+                  Bank transfer
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CTA
+    title="Ready to Book?"
+    subtitle="Call us now to arrange a visit at a time that suits you."
+  />
+</Layout>

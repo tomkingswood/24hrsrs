@@ -1,0 +1,83 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHeader from '../components/PageHeader.astro';
+import FAQ from '../components/FAQ.astro';
+import CTA from '../components/CTA.astro';
+
+const faqs = [
+  {
+    question: "What areas do you cover?",
+    answer: "We cover Sheffield and the surrounding South Yorkshire area, including Rotherham, Doncaster, Barnsley, and nearby towns. If you're unsure whether we cover your area, please give us a call and we'll be happy to help."
+  },
+  {
+    question: "Do you repair all makes and models of stairlift?",
+    answer: "Yes, we repair all major brands of stairlifts including Stannah, Acorn, Brooks, Handicare, Minivator, ThyssenKrupp, Platinum, Companion, and many others. If you have an older or less common model, give us a call – we can usually help."
+  },
+  {
+    question: "What is your call-out charge?",
+    answer: "Our standard call-out charge is £70.00 for visits between 8:00am and 6:00pm. For emergency call-outs outside these hours (6:00pm to 8:00am, weekends, and bank holidays), the charge is £100.00. All prices include VAT."
+  },
+  {
+    question: "How quickly can you get to me?",
+    answer: "For emergencies, we aim to reach you as quickly as possible – often the same day. For non-urgent repairs and servicing, we can usually arrange a visit within a few days at a time that's convenient for you."
+  },
+  {
+    question: "Do you offer a 'no fix, no fee' guarantee?",
+    answer: "Yes, if we can't fix your stairlift, you don't pay our repair charges. You'll only pay the call-out fee for us to diagnose the problem. We'll always be upfront about whether a repair is possible and cost-effective."
+  },
+  {
+    question: "How often should my stairlift be serviced?",
+    answer: "We recommend having your stairlift serviced at least once a year. Regular servicing helps prevent breakdowns, extends the life of your stairlift, and ensures it's safe to use. If your stairlift is used frequently, you may benefit from more regular servicing."
+  },
+  {
+    question: "Can you remove my old stairlift?",
+    answer: "Yes, we offer stairlift removal services. Whether you're moving house, no longer need the stairlift, or want to upgrade to a new model, we can safely remove your existing unit. In some cases, we may even offer you payment for a working stairlift."
+  }
+];
+---
+
+<Layout
+  title="Stairlift FAQs | 24 Hour Stairlift Repair Services"
+  description="Frequently asked questions about stairlift repairs, servicing, and installations. Find answers to common queries or call 0114 2347195 for help."
+>
+  <PageHeader
+    title="Frequently Asked Questions"
+    subtitle="Find answers to common questions about our services"
+  />
+
+  <section class="py-16 lg:py-20">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-white rounded-2xl shadow-sm border border-slate-100 p-6 sm:p-8">
+        {faqs.map((faq, index) => (
+          <FAQ
+            question={faq.question}
+            answer={faq.answer}
+            isOpen={index === 0}
+          />
+        ))}
+      </div>
+
+      <div class="mt-12 text-center">
+        <p class="text-slate-600 mb-4">
+          Can't find the answer you're looking for?
+        </p>
+        <p class="text-slate-700">
+          Give us a call on{' '}
+          <a href="tel:01142347195" class="text-primary-600 font-semibold hover:text-primary-700 transition-colors">
+            0114 2347195
+          </a>
+          {' '}or{' '}
+          <a href="tel:07835204800" class="text-primary-600 font-semibold hover:text-primary-700 transition-colors">
+            07835 204800
+          </a>
+          {' '}and we'll be happy to help.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <CTA
+    title="Have More Questions?"
+    subtitle="Our friendly team is here to help. Call us anytime."
+  />
+</Layout>

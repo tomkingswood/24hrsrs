@@ -1,0 +1,200 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHeader from '../components/PageHeader.astro';
+import CTA from '../components/CTA.astro';
+import { Check, Phone, Package, Trash2, ArrowRight } from 'lucide-astro';
+---
+
+<Layout
+  title="Stairlift Installations & Removals | Sheffield & South Yorkshire"
+  description="Professional stairlift installation and removal services in South Yorkshire. New and reconditioned stairlifts available. Call 0114 2347195 for a free quote."
+>
+  <PageHeader
+    title="Installations & Removals"
+    subtitle="Professional installation of new and reconditioned stairlifts"
+  />
+
+  <section class="py-16 lg:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <!-- Main content -->
+        <div class="lg:col-span-2">
+          <!-- Installations Section -->
+          <div class="mb-16">
+            <div class="flex items-center gap-3 mb-6">
+              <div class="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center">
+                <Package class="w-6 h-6 text-primary-600" />
+              </div>
+              <h2 class="text-2xl font-bold text-slate-900">Stairlift Installation</h2>
+            </div>
+
+            <p class="text-lg text-slate-600 mb-6">
+              We supply and install both new and high-quality reconditioned stairlifts to suit
+              your needs and budget. All installations are carried out by experienced engineers
+              with minimal disruption to your home.
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+              <div class="bg-slate-50 rounded-xl p-6">
+                <h3 class="font-semibold text-slate-900 mb-3">New Stairlifts</h3>
+                <ul class="space-y-2">
+                  <li class="flex items-start gap-2 text-sm text-slate-600">
+                    <Check class="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" />
+                    Latest models from top brands
+                  </li>
+                  <li class="flex items-start gap-2 text-sm text-slate-600">
+                    <Check class="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" />
+                    Full manufacturer warranty
+                  </li>
+                  <li class="flex items-start gap-2 text-sm text-slate-600">
+                    <Check class="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" />
+                    Custom fitted to your staircase
+                  </li>
+                </ul>
+              </div>
+
+              <div class="bg-slate-50 rounded-xl p-6">
+                <h3 class="font-semibold text-slate-900 mb-3">Reconditioned Stairlifts</h3>
+                <ul class="space-y-2">
+                  <li class="flex items-start gap-2 text-sm text-slate-600">
+                    <Check class="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" />
+                    Budget-friendly option
+                  </li>
+                  <li class="flex items-start gap-2 text-sm text-slate-600">
+                    <Check class="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" />
+                    Fully serviced and tested
+                  </li>
+                  <li class="flex items-start gap-2 text-sm text-slate-600">
+                    <Check class="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" />
+                    Warranty included
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <h3 class="font-semibold text-slate-900 mb-4">Our Installation Process</h3>
+            <ol class="space-y-4 mb-8">
+              <li class="flex items-start gap-4">
+                <span class="w-8 h-8 bg-primary-600 text-white rounded-full flex items-center justify-center text-sm font-semibold flex-shrink-0">1</span>
+                <div>
+                  <span class="font-medium text-slate-900">Free Home Survey</span>
+                  <p class="text-sm text-slate-600 mt-1">We visit your home to assess your staircase and discuss your needs</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-4">
+                <span class="w-8 h-8 bg-primary-600 text-white rounded-full flex items-center justify-center text-sm font-semibold flex-shrink-0">2</span>
+                <div>
+                  <span class="font-medium text-slate-900">No-Obligation Quote</span>
+                  <p class="text-sm text-slate-600 mt-1">We provide a clear, detailed quote with no hidden costs</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-4">
+                <span class="w-8 h-8 bg-primary-600 text-white rounded-full flex items-center justify-center text-sm font-semibold flex-shrink-0">3</span>
+                <div>
+                  <span class="font-medium text-slate-900">Professional Installation</span>
+                  <p class="text-sm text-slate-600 mt-1">Quick, clean installation by experienced engineers</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-4">
+                <span class="w-8 h-8 bg-primary-600 text-white rounded-full flex items-center justify-center text-sm font-semibold flex-shrink-0">4</span>
+                <div>
+                  <span class="font-medium text-slate-900">Full Demonstration</span>
+                  <p class="text-sm text-slate-600 mt-1">We show you how to use your new stairlift safely and confidently</p>
+                </div>
+              </li>
+            </ol>
+          </div>
+
+          <!-- Removals Section -->
+          <div>
+            <div class="flex items-center gap-3 mb-6">
+              <div class="w-12 h-12 bg-slate-100 rounded-xl flex items-center justify-center">
+                <Trash2 class="w-6 h-6 text-slate-600" />
+              </div>
+              <h2 class="text-2xl font-bold text-slate-900">Stairlift Removal</h2>
+            </div>
+
+            <p class="text-lg text-slate-600 mb-6">
+              Need a stairlift removed? Whether you're moving house, no longer need it, or want
+              to upgrade to a newer model, we can safely remove your existing stairlift.
+            </p>
+
+            <ul class="space-y-3 mb-8">
+              <li class="flex items-start gap-3">
+                <Check class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
+                <span class="text-slate-700">Safe, professional removal</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <Check class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
+                <span class="text-slate-700">Minimal disruption to your home</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <Check class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
+                <span class="text-slate-700">We may offer payment for working stairlifts</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <Check class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
+                <span class="text-slate-700">Environmentally responsible disposal</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="lg:col-span-1">
+          <div class="sticky top-24 space-y-6">
+            <div class="bg-primary-50 rounded-2xl p-6 border border-primary-100">
+              <h3 class="font-semibold text-slate-900 mb-4">Get a Free Quote</h3>
+              <p class="text-slate-600 text-sm mb-6">
+                Call us today for a free, no-obligation home survey and quote.
+              </p>
+              <div class="space-y-3">
+                <a
+                  href="tel:01142347195"
+                  class="flex items-center justify-center gap-2 w-full bg-primary-600 hover:bg-primary-700 text-white px-4 py-3 rounded-lg font-medium transition-colors"
+                >
+                  <Phone class="w-5 h-5" />
+                  0114 2347195
+                </a>
+                <a
+                  href="tel:07835204800"
+                  class="flex items-center justify-center gap-2 w-full bg-white hover:bg-slate-50 text-primary-600 px-4 py-3 rounded-lg font-medium transition-colors border border-primary-200"
+                >
+                  <Phone class="w-5 h-5" />
+                  07835 204800
+                </a>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm">
+              <h3 class="font-semibold text-slate-900 mb-4">Stairlift Types</h3>
+              <ul class="space-y-3 text-sm text-slate-600">
+                <li class="flex items-center gap-2">
+                  <ArrowRight class="w-4 h-4 text-primary-500" />
+                  Straight stairlifts
+                </li>
+                <li class="flex items-center gap-2">
+                  <ArrowRight class="w-4 h-4 text-primary-500" />
+                  Curved stairlifts
+                </li>
+                <li class="flex items-center gap-2">
+                  <ArrowRight class="w-4 h-4 text-primary-500" />
+                  Outdoor stairlifts
+                </li>
+                <li class="flex items-center gap-2">
+                  <ArrowRight class="w-4 h-4 text-primary-500" />
+                  Heavy-duty stairlifts
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CTA
+    title="Ready to Install a Stairlift?"
+    subtitle="Contact us today for a free home survey and no-obligation quote."
+  />
+</Layout>

@@ -1,0 +1,130 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import CTA from '../components/CTA.astro';
+import { Wrench, Package, Settings, MapPin, Clock, Phone } from 'lucide-astro';
+---
+
+<Layout title="24 Hour Stairlift Repair Services | Sheffield & South Yorkshire">
+  <Hero />
+
+  <!-- Services Section -->
+  <section class="py-20 lg:py-24 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
+          Our Services
+        </h2>
+        <p class="text-lg text-slate-600 max-w-2xl mx-auto">
+          From emergency repairs to new installations, we provide comprehensive stairlift services
+          to keep you moving safely in your home.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <ServiceCard
+          title="Stairlift Repairs"
+          description="Fast, reliable repairs for all makes and models. Available 24/7 for emergencies with same-day service available."
+          href="/repairs"
+          icon={Wrench}
+        />
+        <ServiceCard
+          title="Installations & Removals"
+          description="Professional installation of new and reconditioned stairlifts, plus safe removal of existing units."
+          href="/installations"
+          icon={Package}
+        />
+        <ServiceCard
+          title="Service & Maintenance"
+          description="Regular servicing to keep your stairlift running smoothly and safely. Prevent breakdowns before they happen."
+          href="/servicing"
+          icon={Settings}
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section class="py-20 lg:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div>
+          <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 mb-6">
+            Friendly & Honest Service You Can Trust
+          </h2>
+          <p class="text-lg text-slate-600 mb-8 leading-relaxed">
+            With years of experience in stairlift repairs and installations, we pride ourselves
+            on providing honest, transparent service. We'll always give you straight advice
+            and fair prices – no pressure, no hidden costs.
+          </p>
+
+          <ul class="space-y-4">
+            <li class="flex items-start gap-3">
+              <div class="w-6 h-6 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                <Clock class="w-4 h-4 text-primary-600" />
+              </div>
+              <div>
+                <span class="font-medium text-slate-900">24/7 Emergency Service</span>
+                <p class="text-slate-600 text-sm mt-1">We're available around the clock when you need us most</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <div class="w-6 h-6 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                <Wrench class="w-4 h-4 text-primary-600" />
+              </div>
+              <div>
+                <span class="font-medium text-slate-900">All Makes & Models</span>
+                <p class="text-slate-600 text-sm mt-1">We service Stannah, Acorn, Brooks, and all other brands</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <div class="w-6 h-6 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                <Phone class="w-4 h-4 text-primary-600" />
+              </div>
+              <div>
+                <span class="font-medium text-slate-900">No Fix, No Fee</span>
+                <p class="text-slate-600 text-sm mt-1">If we can't fix it, you don't pay</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-slate-100 rounded-2xl p-8 lg:p-10">
+          <h3 class="text-xl font-semibold text-slate-900 mb-6">Coverage Area</h3>
+          <div class="flex items-start gap-3 mb-6">
+            <MapPin class="w-5 h-5 text-primary-600 flex-shrink-0 mt-1" />
+            <div>
+              <p class="text-slate-700 font-medium">South Yorkshire & Surrounding Areas</p>
+              <p class="text-slate-600 text-sm mt-2">
+                Including Sheffield, Rotherham, Doncaster, Barnsley, and surrounding areas.
+              </p>
+            </div>
+          </div>
+
+          <div class="border-t border-slate-200 pt-6">
+            <p class="text-slate-700 font-medium mb-4">Get a Free Quote</p>
+            <div class="space-y-3">
+              <a
+                href="tel:01142347195"
+                class="flex items-center gap-3 text-primary-600 hover:text-primary-700 font-medium transition-colors"
+              >
+                <Phone class="w-5 h-5" />
+                0114 2347195
+              </a>
+              <a
+                href="tel:07835204800"
+                class="flex items-center gap-3 text-primary-600 hover:text-primary-700 font-medium transition-colors"
+              >
+                <Phone class="w-5 h-5" />
+                07835 204800
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CTA />
+</Layout>
