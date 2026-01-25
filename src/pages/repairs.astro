@@ -69,10 +69,18 @@ import { Check, Clock, Wrench, Phone, AlertCircle } from 'lucide-astro';
             </p>
 
             <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-8">
-              {['Stannah', 'Acorn', 'Brooks', 'Handicare', 'Minivator', 'ThyssenKrupp', 'Platinum'].map((brand) => (
-                <div class="bg-slate-50 rounded-lg px-4 py-3 text-center">
-                  <span class="font-medium text-slate-700">{brand}</span>
-                </div>
+              {[
+                { name: 'Stannah', url: 'https://www.stannah.co.uk' },
+                { name: 'Acorn', url: 'https://www.acornstairlifts.co.uk' },
+                { name: 'Brooks', url: 'https://www.brooksstairlifts.co.uk' },
+                { name: 'Handicare', url: 'https://www.handicare.com' },
+                { name: 'Minivator', url: 'https://www.minivator.co.uk' },
+                { name: 'ThyssenKrupp', url: 'https://www.tkelevator.com' },
+                { name: 'Platinum', url: 'https://www.platinum-stairlifts.co.uk' },
+              ].map((brand) => (
+                <a href={brand.url} target="_blank" rel="noopener noreferrer" class="bg-slate-50 hover:bg-slate-100 rounded-lg px-4 py-3 text-center transition-colors">
+                  <span class="font-medium text-slate-700">{brand.name}</span>
+                </a>
               ))}
             </div>
 
