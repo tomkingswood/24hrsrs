@@ -2,12 +2,12 @@
 import { Phone, Clock, Menu, X, Mail } from 'lucide-astro';
 
 const navLinks = [
-  { href: '/', label: 'Home' },
-  { href: '/repairs', label: 'Repairs' },
-  { href: '/installations', label: 'Installations' },
-  { href: '/servicing', label: 'Servicing' },
-  { href: '/faqs', label: 'FAQs' },
-  { href: '/pricing', label: 'Pricing' },
+  { href: '/', label: 'Home', mobileLabel: 'Home' },
+  { href: '/repairs', label: 'Repairs', mobileLabel: 'Repair Services' },
+  { href: '/installations', label: 'Installations', mobileLabel: 'Install & Remove' },
+  { href: '/servicing', label: 'Servicing', mobileLabel: 'Service' },
+  { href: '/faqs', label: 'FAQs', mobileLabel: 'Questions' },
+  { href: '/pricing', label: 'Pricing', mobileLabel: 'Prices' },
 ];
 
 const currentPath = Astro.url.pathname;
@@ -82,7 +82,7 @@ const currentPath = Astro.url.pathname;
     </div>
 
     <!-- Mobile navigation -->
-    <div class="hidden md:hidden pb-4" id="mobile-menu">
+    <nav class="hidden md:hidden pb-4" id="mobile-menu" aria-label="Mobile navigation">
       <div class="flex flex-col gap-2">
         {navLinks.map((link) => (
           <a
@@ -94,11 +94,11 @@ const currentPath = Astro.url.pathname;
                 : 'text-slate-600 hover:bg-slate-50'
             ]}
           >
-            {link.label}
+            {link.mobileLabel}
           </a>
         ))}
       </div>
-    </div>
+    </nav>
   </nav>
 </header>
 
